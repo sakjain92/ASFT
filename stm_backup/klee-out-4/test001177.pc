@@ -1,0 +1,21 @@
+array reg_selection[4] : w32 -> w8 = symbolic
+array reg_data[4] : w32 -> w8 = symbolic
+(query [(Eq 10
+             (ReadLSB w32 0 reg_selection))
+         (Eq 0
+             (And w32 N0:(ReadLSB w32 0 reg_data)
+                      1))
+         (Eq 0 (And w32 N0 2))
+         (Eq 0 (And w32 N0 4))
+         (Eq 0 (And w32 N0 8))
+         (Eq 0 (And w32 N0 16))
+         (Eq 0 (And w32 N0 32))
+         (Eq 0 (And w32 N0 64))
+         (Eq 0 (And w32 N0 128))
+         (Eq 0 (And w32 N0 256))
+         (Eq 0 (And w32 N0 512))
+         (Eq 0 (And w32 N0 1024))
+         (Eq 0 (And w32 N0 2048))
+         (Eq 0 (And w32 N0 4096))
+         (Eq 0 (And w32 N0 8192))]
+        false)

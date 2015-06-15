@@ -1,0 +1,13 @@
+mkdir -p bin
+rm -rf ./bin/*
+llvm-gcc --emit-llvm -g -c common.c -o bin/common_llvm.o
+llvm-gcc --emit-llvm -g -c common.h -o bin/common_llvm.gch
+llvm-gcc --emit-llvm -g -c stm_main.c -o bin/stm_main_llvm.o
+llvm-gcc --emit-llvm -g -c stm_main.h -o bin/stm_main_llvm.gch
+llvm-gcc --emit-llvm -g -c executioner_main.c -o bin/executioner_main_llvm.o
+llvm-gcc --emit-llvm -g -c executioner_main.h -o bin/executioner_main_llvm.gch
+cd bin
+llvm-ld executioner_main_llvm.o common_llvm.o stm_main_llvm.o 
+cd ..
+cp bin/a.out.bc ./single.o
+klee single.o

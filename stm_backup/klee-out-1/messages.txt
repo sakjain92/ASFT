@@ -1,0 +1,4 @@
+KLEE: ERROR: /home/saksham/work/freescale/validation/modelling/automatic_test_gen/stm_backup/executioner_main.c:34: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /home/saksham/work/freescale/validation/modelling/automatic_test_gen/stm_backup/stm_main.c:110: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location

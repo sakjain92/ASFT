@@ -1,0 +1,57 @@
+array reg_selection[4] : w32 -> w8 = symbolic
+(query [(Slt N0:(ReadLSB w32 0 reg_selection)
+              20)
+         (Eq false
+             (Ult N1:(Mul w64 8 (SExt w64 N0))
+                  793))
+         (Eq false
+             (Ult (Add w64 368 N1) 19))
+         (Eq false
+             (Ult (Add w64 768 N1) 93))
+         (Eq false
+             (Ult (Add w64 1440 N1) 93))
+         (Eq false
+             (Ult (Add w64 161648 N1) 93))
+         (Eq false
+             (Ult (Add w64 162368 N1) 93))
+         (Eq false
+             (Ult (Add w64 253296 N1) 93))
+         (Eq false
+             (Ult (Add w64 253968 N1) 93))
+         (Eq false
+             (Ult (Add w64 260224 N1) 93))
+         (Eq false
+             (Ult (Add w64 261776 N1) 505))
+         (Eq false
+             (Ult (Add w64 262560 N1) 93))
+         (Eq false
+             (Ult (Add w64 263344 N1) 121))
+         (Eq false
+             (Ult (Add w64 264064 N1) 93))
+         (Eq false
+             (Ult (Add w64 264896 N1) 121))
+         (Eq false
+             (Ult (Add w64 265696 N1) 93))
+         (Eq false
+             (Ult (Add w64 266368 N1) 93))
+         (Eq false
+             (Ult (Add w64 307856 N1) 93))
+         (Eq false
+             (Ult (Add w64 316592 N1) 7))
+         (Eq false
+             (Ult (Add w64 328944 N1) 19))
+         (Eq false
+             (Ult (Add w64 329280 N1) 16))
+         (Eq false
+             (Ult (Add w64 329504 N1) 21))
+         (Eq false
+             (Ult (Add w64 333136 N1) 2))
+         (Eq false
+             (Ult (Add w64 344640 N1) 14))
+         (Eq false
+             (Ult (Add w64 469568 N1) 93))
+         (Eq false
+             (Ult (Add w64 470160 N1) 93))
+         (Eq false
+             (Ult (Add w64 474192 N1) 1785))]
+        false)

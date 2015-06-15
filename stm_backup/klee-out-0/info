@@ -1,0 +1,3 @@
+klee a.out.bc
+PID: 6280
+Started: 2015-06-14 19:45:30

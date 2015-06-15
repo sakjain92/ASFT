@@ -1,0 +1,16 @@
+Error: memory error: out of bound pointer
+File: /home/saksham/work/freescale/validation/modelling/automatic_test_gen/stm_backup/executioner_main.c
+Line: 34
+assembly.ll line: 97
+Stack: 
+	#000000097 in main () at /home/saksham/work/freescale/validation/modelling/automatic_test_gen/stm_backup/executioner_main.c:34
+Info: 
+	address: (Add w64 54505040
+          (Mul w64 8
+                   (SExt w64 (ReadLSB w32 0 reg_selection))))
+	example: 18446744056584187472
+	range: [0, 18446744073709551608]
+	next: object at 54507216 of size 1
+		MO33[1] allocated at global:STM_STATE.0.b
+	prev: object at 54505040 of size 800
+		MO32[800] allocated at global:ALL_REG
